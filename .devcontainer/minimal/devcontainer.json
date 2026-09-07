@@ -1,7 +1,11 @@
 {
 	// More info about Features: https://containers.dev/features
 	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-	"features": {},
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": {
+         "installJupyterlab": true
+		}
+	},
 
 	"onCreateCommand": "",
 	"postCreateCommand": "",
