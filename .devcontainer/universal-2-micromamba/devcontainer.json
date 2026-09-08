@@ -1,5 +1,6 @@
 {
 	// More info about Features: https://containers.dev/features
+	"name":"universal-micromamba",
 	"image": "mcr.microsoft.com/devcontainers/universal",
 	"features": {},
 
