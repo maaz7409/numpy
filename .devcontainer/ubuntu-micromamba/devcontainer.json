@@ -1,0 +1,33 @@
+{
+  "name": "NumPy Dev : ubuntu-micromamba",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  
+  "features": {
+    // Adds SSH support so one connect to the Codespace remotely
+    "ghcr.io/devcontainers/features/sshd:1": {},
+    
+    // Installs a base Python and JupyterLab in the container
+    "ghcr.io/devcontainers/features/python:1": {
+      "installTools": false,
+      "installJupyterlab": true
+    }
+  },
+
+  // Executes existing setup
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/home/codespace/micromamba/envs/numpy-dev/bin/python"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "charliermarsh.ruff"
+      ]
+    }
+  }
+}
+
