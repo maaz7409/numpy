@@ -8,7 +8,8 @@
     // Kept for base Python tooling, but disabled global package installs
     "ghcr.io/devcontainers/features/python:1": {
       "installTools": false
-    }
+    },
+    "ghcr.io/devcontainers/features/conda:1": {}
   },
 
   "postCreateCommand": "bash .devcontainer/setup.sh",
