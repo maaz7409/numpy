@@ -3,12 +3,14 @@
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   
   "features": {
+    // install sshd to enable ssh connection
     "ghcr.io/devcontainers/features/sshd:1": {},
     
-    // Kept for base Python tooling, but disabled global package installs
+    // install python for base python tooling, but disabled global package installs
     "ghcr.io/devcontainers/features/python:1": {
       "installTools": false
     },
+    // install conda
     "ghcr.io/devcontainers/features/conda:1": {}
   },
 
@@ -17,7 +19,7 @@
   "customizations": {
     "vscode": {
       "settings": {
-        "python.defaultInterpreterPath": "/home/codespace/micromamba/envs/numpy-dev/bin/python"
+        "python.defaultInterpreterPath": "/home/vscode/micromamba/envs/numpy-dev/bin/python"
       },
       "extensions": [
         "ms-python.python",
