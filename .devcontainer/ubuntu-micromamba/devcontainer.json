@@ -3,17 +3,14 @@
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   
   "features": {
-    // Adds SSH support so one connect to the Codespace remotely
     "ghcr.io/devcontainers/features/sshd:1": {},
     
-    // Installs a base Python and JupyterLab in the container
+    // Kept for base Python tooling, but disabled global package installs
     "ghcr.io/devcontainers/features/python:1": {
-      "installTools": false,
-      "installJupyterlab": true
+      "installTools": false
     }
   },
 
-  // Executes existing setup
   "postCreateCommand": "bash .devcontainer/setup.sh",
 
   "customizations": {
@@ -30,4 +27,3 @@
     }
   }
 }
-
